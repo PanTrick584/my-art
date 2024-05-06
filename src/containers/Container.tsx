@@ -1,6 +1,9 @@
 import './Container.scss';
 import { useContextProvider } from '../context/context';
 import { ReactNode } from 'react';
+import SectionGrid from './sections/SectionGrid';
+import SectionRow from './sections/SectionRow';
+import SectionBanner from './sections/SectionBanner';
 
 type Artwork = {
     type: string;
@@ -29,7 +32,13 @@ const Container = () => {
     ];
     return (
         <div className="container">
-            {artworksArray.map((artwork, id): ReactNode => {
+            <div className="section-container">
+                <SectionRow />
+                <SectionGrid />
+                <SectionRow />
+                <SectionBanner />
+                <SectionGrid />
+            {/* {artworksArray.map((artwork, id): ReactNode => {
                 return(
                     <div className='artwork-container' key={id}>
                         <img className='artwork-image' src={artwork.path}/>
@@ -42,7 +51,8 @@ const Container = () => {
                         </div>
                     </div>
                 )
-            })}
+            })} */}
+            </div>
         </div>
     )
 }
