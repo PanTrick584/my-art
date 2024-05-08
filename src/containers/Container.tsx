@@ -26,17 +26,17 @@ const Container = () => {
             type: 'drawing',
             name: 'naczynia',
             date: 2015,
-            id: 1,
+            id: 2,
             path: '/assets/drawings/pic-2.jpg'
         }
     ];
     return (
         <div className="container">
             <div className="section-container">
-                <SectionRow />
+                {/* <SectionRow /> */}
                 <SectionGrid />
-                <SectionRow />
-                <SectionBanner />
+                {/* <SectionRow /> */}
+                {/* <SectionBanner /> */}
                 <SectionGrid />
             {/* {artworksArray.map((artwork, id): ReactNode => {
                 return(

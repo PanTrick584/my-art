@@ -1,0 +1,11 @@
+.artwork-data {
+    display: flex;
+    gap: 10px;
+
+    &-type,
+    &-year,
+    &-space {
+        font-size: 14px;
+        opacity: .6;
+    }
+}

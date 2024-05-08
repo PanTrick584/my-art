@@ -1,9 +1,12 @@
+import { ArtworkTitle } from '../../components/ArtworkTitle';
+import { ArtworkData } from '../../components/ArtworkData';
 import './ArtworkInfo.scss';
 
 const ArtworkInfo = () => {
     return (
         <div className="artwork-info">
-            many diff infos
+            <ArtworkTitle />
+            <ArtworkData />
         </div>
     )
 }
