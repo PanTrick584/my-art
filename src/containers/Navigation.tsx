@@ -4,7 +4,7 @@ const Navigation = () => {
     return (
         <nav className='navigation'>
             <div className="nav-image">
-                <img src="/assets/drawings/pic-2.jpg" alt="" />
+                <img src="/assets/paintings/painting-wide-3-2020.jpg" alt="" />
             </div>
             <div className="nav-container">
                 <ul className='nav-list'>

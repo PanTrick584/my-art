@@ -2,6 +2,8 @@ import './Container.scss';
 import { useContextProvider } from '../context/context';
 import { ReactNode } from 'react';
 import SectionGrid from './sections/SectionGrid';
+import SectionOne from './sections/SectionOne';
+import SectionTwo from './sections/SectionTwo';
 import SectionRow from './sections/SectionRow';
 import SectionBanner from './sections/SectionBanner';
 
@@ -34,6 +36,8 @@ const Container = () => {
         <div className="container">
             <div className="section-container">
                 {/* <SectionRow /> */}
+                <SectionOne />
+                <SectionTwo />
                 <SectionGrid />
                 {/* <SectionRow /> */}
                 {/* <SectionBanner /> */}

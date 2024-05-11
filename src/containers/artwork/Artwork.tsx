@@ -2,10 +2,14 @@ import { ArtworkImage } from "../../components/ArtworkImage";
 import './Artwork.scss';
 import ArtworkInfo from "./ArtworkInfo";
 
-const Artwork = () => {
+type ImageSrc = {
+    imageSrc: string
+}
+
+const Artwork = ({imageSrc}: ImageSrc) => {
     return (
         <div className="artwork">
-            <ArtworkImage image={'/assets/drawings/pic-1.jpg'}/>
+            <ArtworkImage image={imageSrc}/>
             <ArtworkInfo />
         </div>
     )
