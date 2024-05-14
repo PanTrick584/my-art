@@ -1,8 +1,8 @@
 import Artwork from "../artwork/Artwork";
-import './section-one.scss';
 import './section-grid.scss';
+import './section-one.scss';
 
-const SectionGrid = () => {
+const SectionOne = () => {
     return (
         <div className="section-grid section-one">
             <Artwork imageSrc={'/assets/drawings/drawing-tall-1-2016.jpg'} />
@@ -12,4 +12,4 @@ const SectionGrid = () => {
     )
 }
 
-export default SectionGrid
+export default SectionOne;

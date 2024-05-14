@@ -1,11 +1,9 @@
 import './Container.scss';
 import { useContextProvider } from '../context/context';
 import { ReactNode } from 'react';
-import SectionGrid from './sections/SectionGrid';
 import SectionOne from './sections/SectionOne';
 import SectionTwo from './sections/SectionTwo';
-import SectionRow from './sections/SectionRow';
-import SectionBanner from './sections/SectionBanner';
+import SectionThree from './sections/SectionThree';
 
 type Artwork = {
     type: string;
@@ -35,13 +33,9 @@ const Container = () => {
     return (
         <div className="container">
             <div className="section-container">
-                {/* <SectionRow /> */}
                 <SectionOne />
                 <SectionTwo />
-                <SectionGrid />
-                {/* <SectionRow /> */}
-                {/* <SectionBanner /> */}
-                <SectionGrid />
+                <SectionThree />
             {/* {artworksArray.map((artwork, id): ReactNode => {
                 return(
                     <div className='artwork-container' key={id}>
