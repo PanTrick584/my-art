@@ -9,6 +9,7 @@ const SectionThree = () => {
             <Artwork imageSrc={'/assets/paintings/painting-wide-2-2019.jpg'} />
             <Artwork imageSrc={'/assets/paintings/painting-square-2-2018.jpg'} />
             <Artwork imageSrc={'/assets/paintings/painting-square-2-2018.jpg'} />
+            <Artwork imageSrc={'/assets/paintings/painting-square-2-2018.jpg'} />
         </div>
     )
 }

@@ -36,6 +36,9 @@ const Container = () => {
                 <SectionOne />
                 <SectionTwo />
                 <SectionThree />
+                <SectionOne />
+                <SectionTwo />
+                <SectionThree />
             {/* {artworksArray.map((artwork, id): ReactNode => {
                 return(
                     <div className='artwork-container' key={id}>
