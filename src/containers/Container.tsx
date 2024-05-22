@@ -1,58 +1,38 @@
-import './Container.scss';
+import './styles/container.scss';
 import { useContextProvider } from '../context/context';
-import { ReactNode } from 'react';
-import SectionOne from './sections/SectionOne';
-import SectionTwo from './sections/SectionTwo';
-import SectionThree from './sections/SectionThree';
+import Section from './sections/Section.tsx';
 
-type Artwork = {
-    type: string;
-    name: string;
-    date: number;
-    id: number;
-    path: string;
-}
+import { drawings } from '../context/data/drawings.ts';
+import { paintings } from '../context/data/paintings.ts';
+import { photos } from '../context/data/photos.ts';
 
 const Container = () => {
-    const artworksArray: Artwork[] = [
-        {
-            type: 'drawing',
-            name: 'kaloryfer',
-            date: 2015,
-            id: 1,
-            path: '/assets/drawings/pic-1.jpg'
-        },
-        {
-            type: 'drawing',
-            name: 'naczynia',
-            date: 2015,
-            id: 2,
-            path: '/assets/drawings/pic-2.jpg'
-        }
-    ];
+    const mixArt = [...drawings, ...paintings, ...photos]
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value)
+        console.log(mixArt);
+    
+        const artworks_a = mixArt.slice(0, 3)
+        const artworks_b = mixArt.slice(4, 9)
+        const artworks_c = mixArt.slice(10, 14)
+        const artworks_d = mixArt.slice(14, 17)
+        const artworks_e = mixArt.slice(17, 22)
+        const artworks_f = mixArt.slice(23, 27)
+    
     return (
         <div className="container">
             <div className="section-container">
-                <SectionOne />
-                <SectionTwo />
-                <SectionThree />
-                <SectionOne />
-                <SectionTwo />
-                <SectionThree />
-            {/* {artworksArray.map((artwork, id): ReactNode => {
-                return(
-                    <div className='artwork-container' key={id}>
-                        <img className='artwork-image' src={artwork.path}/>
-                        <div className="artwork-info">
-                            <h3 className="artwork-title">{artwork.name}</h3>
-                            <div className="info-container">
-                                <span className="artwork-info-type">{artwork.type}</span>
-                                <span className="artwork-info-year">{artwork.date}</span>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })} */}
+                {/* 3 items */}
+                <Section artworks={artworks_a} version='a'/>
+                {/* 5 images */}
+                <Section artworks={artworks_b} version='b'/>
+                {/* 4 images */}
+                <Section artworks={artworks_c} version='c'/>
+                <Section artworks={artworks_d} version='a'/>
+                <Section artworks={artworks_e} version='b'/>
+                <Section artworks={artworks_f} version='c'/>
+
             </div>
         </div>
     )

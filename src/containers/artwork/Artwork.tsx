@@ -1,16 +1,24 @@
 import { ArtworkImage } from "../../components/ArtworkImage";
-import './Artwork.scss';
-import ArtworkInfo from "./ArtworkInfo";
+import './styles/artwork.scss';
+import { ArtworkItem } from "../../types/types";
+import { ArtworkTitle } from "../../components/ArtworkTitle";
+import { ArtworkData } from "../../components/ArtworkData";
 
-type ImageSrc = {
-    imageSrc: string
+interface ItemData {
+    itemData: ArtworkItem
 }
 
-const Artwork = ({imageSrc}: ImageSrc) => {
+const Artwork = ({itemData}: ItemData) => {
+    console.log(itemData);
+    const { title, type, date, images} = itemData;
+    
     return (
         <div className="artwork">
-            <ArtworkImage image={imageSrc}/>
-            <ArtworkInfo />
+            <ArtworkImage image={images} type={type}/>
+            <div className="artwork-info">
+                <ArtworkTitle title={title}/>
+                <ArtworkData type={type} date={date}/>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .navigation {
     width: 100%;
@@ -12,8 +12,12 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        margin: 25px auto 0;
+        margin: 25px 15px;
         z-index: 1;
+
+        @media screen and (min-width: 1024px) {
+            margin: 75px auto 0;
+        }
 
         .nav-text {
             width: 100%;

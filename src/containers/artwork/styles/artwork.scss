@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
 .artwork {
     width: 300px;
@@ -7,4 +7,9 @@
     align-items: flex-start;
     padding: 10px;
     margin: 30px;
+
+    .artwork-info {
+        margin: 20px 0 0;
+        color: $colorSecondary;
+    }
 }

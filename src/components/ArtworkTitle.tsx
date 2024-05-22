@@ -1,9 +1,16 @@
-import './ArtworkTitle.scss';
+import { Text } from '../types/types';
+import './styles/artwork-title.scss';
 
-export const ArtworkTitle = () => {
+interface ArtTitle {
+    title: Text
+}
+
+export const ArtworkTitle: React.FC<ArtTitle> = ({title}) => {
+
+    const lang = ''
     return (
         <div className="artwork-title">
-            Hello this is header of artwork!!
+            {lang ? title.pl : title.default}
         </div>
     )
 }
