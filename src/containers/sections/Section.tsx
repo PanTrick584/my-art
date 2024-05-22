@@ -22,9 +22,6 @@ const Section:  React.FC<SectionProps> = ({ artworks, version }) => {
                             key={artId}
                             itemData={artItem} />
             })}
-            {/* <Artwork imageSrc={'/assets/drawings/drawing-tall-1-2016.jpg'} />
-            <Artwork imageSrc={'/assets/drawings/drawing-tall-1-2017.jpg'} />
-            <Artwork imageSrc={'/assets/drawings/drawing-tall-2-2014.jpg'} /> */}
         </div>
     )
 }

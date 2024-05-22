@@ -10,14 +10,14 @@ interface ItemData {
 
 const Artwork = ({itemData}: ItemData) => {
     console.log(itemData);
-    const { title, type, date, images} = itemData;
+    const { title, type, date, images, point} = itemData;
     
     return (
         <div className="artwork">
-            <ArtworkImage image={images} type={type}/>
+            <ArtworkImage image={images} type={type} />
             <div className="artwork-info">
-                <ArtworkTitle title={title}/>
-                <ArtworkData type={type} date={date}/>
+                <ArtworkTitle title={title} />
+                <ArtworkData type={type} date={date} point={point}/>
             </div>
         </div>
     )
