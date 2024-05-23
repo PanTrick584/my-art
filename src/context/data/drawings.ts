@@ -8,9 +8,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-1-a.jpg",
-            "dr-2024-1-b.jpg",
-            "dr-2024-1-c.jpg"
+            "dr-2023-1-a.jpg",
+            "dr-2023-1-b.jpg",
+            "dr-2023-1-c.jpg",
+            "dr-2023-1-d.jpg",
+            "dr-2023-1-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -25,9 +27,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-2-a.jpg",
-            "dr-2024-2-b.jpg",
-            "dr-2024-2-c.jpg"
+            "dr-2023-2-a.jpg",
+            "dr-2023-2-b.jpg",
+            "dr-2023-2-c.jpg",
+            "dr-2023-2-d.jpg",
+            "dr-2023-2-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -42,9 +46,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-3-a.jpg",
-            "dr-2024-3-b.jpg",
-            "dr-2024-3-c.jpg"
+            "dr-2023-3-a.jpg",
+            "dr-2023-3-b.jpg",
+            "dr-2023-3-c.jpg",
+            "dr-2023-3-d.jpg",
+            "dr-2023-3-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -59,9 +65,12 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-4-a.jpg",
-            "dr-2024-4-b.jpg",
-            "dr-2024-4-c.jpg"
+            "dr-2023-4-a.jpg",
+            "dr-2023-4-b.jpg",
+            "dr-2023-4-c.jpg",
+            "dr-2023-4-d.jpg",
+            "dr-2023-4-e.jpg",
+            "dr-2023-4-f.jpg",
         ],
         type: "drawing",
         point: {
@@ -76,9 +85,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-5-a.jpg",
-            "dr-2024-5-b.jpg",
-            "dr-2024-5-c.jpg"
+            "dr-2023-5-a.jpg",
+            "dr-2023-5-b.jpg",
+            "dr-2023-5-c.jpg",
+            "dr-2023-5-d.jpg",
+            "dr-2023-5-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -93,9 +104,8 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-6-a.jpg",
-            "dr-2024-6-b.jpg",
-            "dr-2024-6-c.jpg"
+            "dr-2023-6-a.jpg",
+            "dr-2023-6-b.jpg",
         ],
         type: "drawing",
         point: {
@@ -110,9 +120,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-7-a.jpg",
-            "dr-2024-7-b.jpg",
-            "dr-2024-7-c.jpg"
+            "dr-2023-7-a.jpg",
+            "dr-2023-7-b.jpg",
+            "dr-2023-7-c.jpg",
+            "dr-2023-7-d.jpg",
+            "dr-2023-7-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -127,9 +139,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-8-a.jpg",
-            "dr-2024-8-b.jpg",
-            "dr-2024-8-c.jpg"
+            "dr-2023-8-a.jpg",
+            "dr-2023-8-b.jpg",
+            "dr-2023-8-c.jpg",
+            "dr-2023-8-d.jpg",
+            "dr-2023-8-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -144,9 +158,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-9-a.jpg",
-            "dr-2024-9-b.jpg",
-            "dr-2024-9-c.jpg"
+            "dr-2023-9-a.jpg",
+            "dr-2023-9-b.jpg",
+            "dr-2023-9-c.jpg",
+            "dr-2023-9-d.jpg",
+            "dr-2023-9-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -161,9 +177,11 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-10-a.jpg",
-            "dr-2024-10-b.jpg",
-            "dr-2024-10-c.jpg"
+            "dr-2023-10-a.jpg",
+            "dr-2023-10-b.jpg",
+            "dr-2023-10-c.jpg",
+            "dr-2023-10-d.jpg",
+            "dr-2023-10-e.jpg",
         ],
         type: "drawing",
         point: {
@@ -178,9 +196,12 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-11-a.jpg",
-            "dr-2024-11-b.jpg",
-            "dr-2024-11-c.jpg"
+            "dr-2023-11-a.jpg",
+            "dr-2023-11-b.jpg",
+            "dr-2023-11-c.jpg",
+            "dr-2023-11-d.jpg",
+            "dr-2023-11-e.jpg",
+            "dr-2023-11-f.jpg",
         ],
         type: "drawing",
         point: {
@@ -195,77 +216,12 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
-            "dr-2024-12-a.jpg",
-            "dr-2024-12-b.jpg",
-            "dr-2024-12-c.jpg"
-        ],
-        type: "drawing",
-        point: {
-            default: "Present Times",
-            pl: "Bieżące prace"
-        }
-    },
-    {
-        title: {
-            default: "Abstract composition #13",
-            pl: "Kompozycja abstrakcyjna #13"
-        },
-        date: "2023",
-        images: [
-            "dr-2024-13-a.jpg",
-            "dr-2024-13-b.jpg",
-            "dr-2024-13-c.jpg"
-        ],
-        type: "drawing",
-        point: {
-            default: "Present Times",
-            pl: "Bieżące prace"
-        }
-    },
-    {
-        title: {
-            default: "Abstract composition #14",
-            pl: "Kompozycja abstrakcyjna #14"
-        },
-        date: "2023",
-        images: [
-            "dr-2024-14-a.jpg",
-            "dr-2024-14-b.jpg",
-            "dr-2024-14-c.jpg"
-        ],
-        type: "drawing",
-        point: {
-            default: "Present Times",
-            pl: "Bieżące prace"
-        }
-    },
-    {
-        title: {
-            default: "Abstract composition #15",
-            pl: "Kompozycja abstrakcyjna #15"
-        },
-        date: "2023",
-        images: [
-            "dr-2024-15-a.jpg",
-            "dr-2024-15-b.jpg",
-            "dr-2024-15-c.jpg"
-        ],
-        type: "drawing",
-        point: {
-            default: "Present Times",
-            pl: "Bieżące prace"
-        }
-    },
-    {
-        title: {
-            default: "Abstract composition #16",
-            pl: "Kompozycja abstrakcyjna #16"
-        },
-        date: "2023",
-        images: [
-            "dr-2024-16-a.jpg",
-            "dr-2024-16-b.jpg",
-            "dr-2024-16-c.jpg"
+            "dr-2023-12-a.jpg",
+            "dr-2023-12-b.jpg",
+            "dr-2023-12-c.jpg",
+            "dr-2023-12-d.jpg",
+            "dr-2023-12-e.jpg",
+            "dr-2023-12-f.jpg",
         ],
         type: "drawing",
         point: {

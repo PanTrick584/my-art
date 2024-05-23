@@ -36,10 +36,14 @@ export const ArtworkImage = ({image, type}: Image) => {
                 <div className="artwork-image-buttons">
                     <div 
                         className="btn-left" 
-                        onClick={() => handleImageChange(0)}>&larr;</div>
+                        onClick={() => handleImageChange(0)}>
+                            <div className='direction'></div>
+                        </div>
                     <div 
                         className="btn-right"
-                        onClick={() => handleImageChange(1)}>&rarr;</div>
+                        onClick={() => handleImageChange(1)}>
+                            <div className='direction'></div>
+                        </div>
                 </div>
             }
         </div>
