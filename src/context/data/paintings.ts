@@ -3,6 +3,66 @@ import { ArtworksType } from "../../types/types";
 export const paintings: ArtworksType = [
     {
         title: {
+            default: "Last sunday",
+            pl: "Ostatnia niedziela"
+        },
+        date: "2024",
+        images: [
+            "pa-2024-1-a.jpg",
+            "pa-2024-1-b.jpg",
+            "pa-2024-1-c.jpg",
+            "pa-2024-1-d.jpg",
+            "pa-2024-1-e.jpg",
+            "pa-2024-1-f.jpg",
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Waiting",
+            pl: "Czekanie"
+        },
+        date: "2024",
+        images: [
+            "pa-2024-2-a.jpg",
+            "pa-2024-2-b.jpg",
+            "pa-2024-2-c.jpg",
+            "pa-2024-2-d.jpg",
+            "pa-2024-2-e.jpg",
+            "pa-2024-2-f.jpg",
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Huge disapointment :/",
+            pl: "Cóż za rozczarowanie :/"
+        },
+        date: "2024",
+        images: [
+            "pa-2024-3-a.jpg",
+            "pa-2024-3-b.jpg",
+            "pa-2024-3-c.jpg",
+            "pa-2024-3-d.jpg",
+            "pa-2024-3-e.jpg",
+            "pa-2024-3-f.jpg",
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
             default: "Abstract composition #1",
             pl: "Kompozycja abstrakcyjna #1"
         },
