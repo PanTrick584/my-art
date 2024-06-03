@@ -1,8 +1,8 @@
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from 'react';
 
 interface MyContextType {
-    count: number;
-    incrementCount: () => void;
+    drawingsOn: boolean;
+    handleDrawing: () => void;
 }
 
 interface MyContextProviderProps {
@@ -20,17 +20,14 @@ export const useContextProvider = () => {
 };
 
 export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
-    const [count, setCount] = useState(0);
-
-    const incrementCount = () => {
-        setCount(prevCount => prevCount + 1);
-    };
+    const [drawingsOn, setDrawingsOn] = useState<boolean>(false);
+    const handleDrawing = () => setDrawingsOn(prev => !prev)
 
     return (
         <MyContext.Provider
             value={{
-                 count,
-                 incrementCount
+                drawingsOn,
+                handleDrawing
             }}>
             {children}
         </MyContext.Provider>

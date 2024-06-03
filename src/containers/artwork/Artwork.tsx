@@ -9,7 +9,7 @@ interface ItemData {
 }
 
 const Artwork = ({itemData}: ItemData) => {
-    console.log(itemData);
+    // console.log(itemData);
     const { title, type, date, images, point} = itemData;
     
     return (

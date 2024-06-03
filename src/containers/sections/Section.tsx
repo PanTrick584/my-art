@@ -16,7 +16,7 @@ const Section:  React.FC<SectionProps> = ({ artworks, version }) => {
     return (
         <div className={`section-grid section-${version}`}>
             {artworks.map((artItem, artId) => {
-                console.log(artItem);
+                // console.log(artItem);
                 
                 return <Artwork 
                             key={artId}
