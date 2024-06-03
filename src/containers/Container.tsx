@@ -9,7 +9,10 @@ import { useState } from 'react';
 
 const Container = () => {
     // const [drawingsVisible, setDrawingsVisible] = useState();
+    const mainContentVisible = useContextProvider().mainContentOn;
     const drawingsVisible = useContextProvider().drawingsOn;
+    const paintingsVisible = useContextProvider().paintingsOn;
+    const photosVisible = useContextProvider().photosOn;
     const mixArt = [...drawings, ...paintings, ...photos]
         .map(value => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
@@ -27,20 +30,33 @@ const Container = () => {
     return (
         <div className="container">
             <div className="section-container">
-                {/* 3 items */}
-                <Section artworks={artworks_a} version='a'/>
-                {/* 5 images */}
-                <Section artworks={artworks_b} version='b'/>
-                {/* 4 images */}
-                <Section artworks={artworks_c} version='c'/>
-                <Section artworks={artworks_d} version='a'/>
-                <Section artworks={artworks_e} version='b'/>
-                <Section artworks={artworks_f} version='c'/>
+                {mainContentVisible && 
+                    <>
+                        <Section artworks={artworks_a} version='a'/>
+                        <Section artworks={artworks_b} version='b'/>
+                        <Section artworks={artworks_c} version='c'/>
+                        <Section artworks={artworks_d} version='a'/>
+                        <Section artworks={artworks_e} version='b'/>
+                        <Section artworks={artworks_f} version='c'/>
+                    </>
+                }
                 {drawingsVisible
                  && <div 
                         className='drawings-container'
                         // drawings={drawings}
                     >drawings
+                    </div>}
+                {paintingsVisible
+                 && <div 
+                        className='drawings-container'
+                        // drawings={drawings}
+                    >paintings
+                    </div>}
+                {photosVisible
+                 && <div 
+                        className='drawings-container'
+                        // drawings={drawings}
+                    >photos
                     </div>}
             </div>
         </div>
