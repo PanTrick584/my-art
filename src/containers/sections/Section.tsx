@@ -11,13 +11,9 @@ interface SectionProps {
 }
 
 const Section:  React.FC<SectionProps> = ({ artworks, version }) => {
-    console.log(artworks);
-    
     return (
         <div className={`section-grid section-${version}`}>
             {artworks.map((artItem, artId) => {
-                // console.log(artItem);
-                
                 return <Artwork 
                             key={artId}
                             itemData={artItem} />

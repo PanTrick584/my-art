@@ -5,18 +5,23 @@
     position: relative;
     overflow: hidden;
     background-color: $colorPrimary;
+    z-index: 1;
+
+    // @media screen and (min-width: 1024px) {
+    //     position: relative;
+    // }
 
     .nav-container {
         width: 100%;
         max-width: 1440px;
         display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        margin: 25px 15px;
-        z-index: 1;
-
+        margin: 25px 15px 0 15px;
+        flex-direction: column;
+        
         @media screen and (min-width: 1024px) {
             margin: 75px auto 0;
+            flex-direction: row;
+            align-items: flex-end;
         }
 
         .nav-text {
@@ -29,23 +34,24 @@
         .nav-list {
             display: flex;
             align-items: flex-start;
-            margin: 0 auto;
             list-style-type: none;
-            // visibility: hidden;
+
+            @media screen and (min-width: 1024px) {
+                margin: 0 auto;
+            }
     
             &-item {
                 width: max-content;
-                padding: 2px 12px;
+                padding: 2px 12px 0 0;
                 font-size: 22px;
                 color: $colorSecondary;
                 text-transform: uppercase;
-                // border-right: 3px solid $colorSecondary;
                 cursor: pointer;
                 transition: all .1s;
 
-                // &:first-of-type {
-                //     border-left: 3px solid $colorSecondary;
-                // }
+                @media screen and (min-width: 1024px) {
+                    padding: 2px 12px;
+                }
 
                 &:hover {
                     color: rgba($colorSecondary, .5);

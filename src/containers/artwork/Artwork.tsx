@@ -9,9 +9,8 @@ interface ItemData {
 }
 
 const Artwork = ({itemData}: ItemData) => {
-    // console.log(itemData);
     const { title, type, date, images, point} = itemData;
-    
+
     return (
         <div className="artwork">
             <ArtworkImage image={images} type={type} />
