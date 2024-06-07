@@ -20,11 +20,13 @@
         bottom: 0;
         right: 0;
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: row;
+        height: 40px;
+        width: 100%;
 
         .btn-left,
         .btn-right {
+            width: 100%;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -33,34 +35,23 @@
             height: 100%;
             text-align: center;
             transition: all .2s;
+            color: $colorSecondary;
 
             &:hover {
                 background-color: rgba($colorPrimary, .6);
             }
 
             .direction {
-                height: 12px;
-                width: 8px;
-                background-color: rgba($colorSecondary, .6);
+                width: 100%;
             }
         }
 
         .btn-left {
-            border-bottom: 1px solid $colorPrimary;
-
-            .direction {
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-            }
+            border-right: 1px solid $colorPrimary;
         }
 
         .btn-right {
-            border-top: 1px solid $colorPrimary;
-
-            .direction {
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-            }
+            border-left: 1px solid $colorPrimary;
         }
     }
 }

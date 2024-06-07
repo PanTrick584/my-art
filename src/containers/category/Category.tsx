@@ -7,13 +7,11 @@ type CategoryData = {
 }
 
 const Category = ({data}: CategoryData) => {
-    console.log(data);
-    
     return (
         <div className="category">
-            {data.map( item => {
+            {data.map( (item, id) => {
                 return (
-                    <Artwork itemData={item}/>
+                    <Artwork key={id} itemData={item}/>
                 )
             })}
         </div>
