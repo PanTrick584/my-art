@@ -1,3 +1,15 @@
+@import '../../styles/variables.scss';
+
 .footer {
-    display: none;
+    background-color: $colorPrimary;
+
+    &-container {
+        margin: 0 15px;
+        padding: 25px 0;
+    }
+
+    &-list {
+        list-style-type: none;
+        
+    }
 }

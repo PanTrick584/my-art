@@ -9,8 +9,9 @@ type Image = {
 
 export const ArtworkImage = ({image, type}: Image) => {
     const [currentImage, setCurrentImage] = useState<number>(0);
+    const [loading, setLoading] = useState<boolean>(true);
 
-    const handleImageChange = (move: number) => {      
+    const handleImageChange = (move: number) => {
         setCurrentImage( prev => {
             let activeImg = prev
             if( activeImg >= 0 && activeImg < image.length -1) {
@@ -25,7 +26,7 @@ export const ArtworkImage = ({image, type}: Image) => {
 
     return (
         <div className="artwork-image">
-            {/* <Loader /> */}
+            {loading && <Loader />}
             {image.map( (img, id) => {
                 return (
                     <img 
@@ -33,7 +34,8 @@ export const ArtworkImage = ({image, type}: Image) => {
                         alt="" 
                         key={id}
                         className="artwork-image-item" 
-                        style={{transform: `translateX(-${currentImage * 100}%)`}}
+                        onLoad={() => setLoading(false)}
+                        style={{transform: `translateX(-${currentImage * 100}%)`, flex: '0 0 0'}}
                         loading='lazy' />
                 )
             })}

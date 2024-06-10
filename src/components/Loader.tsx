@@ -3,7 +3,7 @@ import './styles/loader.scss';
 export const Loader = () => {
     return (
         <div className="loader">
-            LOADER!
+            <div className="loader-spinner"></div>
         </div>
     )
 }
