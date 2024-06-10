@@ -42,12 +42,12 @@ const Container = () => {
                         <Category data={drawings} />
                     </div>}
                 {paintingsVisible
-                 && <div className='drawings-container'>
+                 && <div className='paintings-container'>
                         <Category data={paintings} />
                     </div>}
                 {photosVisible
-                 && <div className='drawings-container'>
-                        photos
+                 && <div className='photos-container'>
+                        <Category data={photos} />
                     </div>}
             </div>
         </div>

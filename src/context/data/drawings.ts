@@ -386,7 +386,7 @@ export const drawings: ArtworksType = [
         },
         date: "2016",
         images: [
-            "drawing-tall-6-2016.jpg"
+            "drawing-tall-7-2016.jpg"
         ],
         type: "drawing",
         point: {
