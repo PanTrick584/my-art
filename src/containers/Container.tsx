@@ -6,6 +6,7 @@ import { drawings } from '../context/data/drawings.ts';
 import { paintings } from '../context/data/paintings.ts';
 import { photos } from '../context/data/photos.ts';
 import Category from './category/Category.tsx';
+import SingleView from './singleView/SingleView.tsx';
 
 const Container = () => {
     const mainContentVisible = useContextProvider().mainContentOn;
@@ -26,6 +27,7 @@ const Container = () => {
 
     return (
         <div className="container">
+            {/* <SingleView /> */}
             <div className="section-container">
                 {mainContentVisible 
                  && <>

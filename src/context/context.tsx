@@ -6,6 +6,9 @@ interface MyContextType {
     paintingsOn: boolean;
     photosOn: boolean;
     handleRouting: (route: string) => void;
+    singleViewVisible: boolean;
+    singleViewSrc: string;
+    handleSingleView: (singleViewSrc: string, singleViewVisible: boolean) => void;
 }
 
 interface MyContextProviderProps {
@@ -23,10 +26,12 @@ export const useContextProvider = () => {
 };
 
 export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
-    const [mainContentOn, setMainContentOn] = useState<boolean>(true);
-    const [drawingsOn, setDrawingsOn] = useState<boolean>(false);
-    const [paintingsOn, setPaintingsOn] = useState<boolean>(false);
-    const [photosOn, setPhotosOn] = useState<boolean>(false);
+    const [mainContentOn, setMainContentOn] = useState(true);
+    const [drawingsOn, setDrawingsOn] = useState(false);
+    const [paintingsOn, setPaintingsOn] = useState(false);
+    const [photosOn, setPhotosOn] = useState(false);
+    const [singleViewVisible, setSingleViewVisible] = useState(false);
+    const [singleViewSrc, setSingleViewSrc] = useState('');
 
     const handleRouting = (route: string) => {
         if (route === 'main') {
@@ -55,6 +60,11 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
         }
     }
 
+    const handleSingleView = (singleViewSrc: string, singleViewVisible: boolean) => {
+        setSingleViewVisible(!singleViewVisible);
+        setSingleViewSrc(singleViewSrc)
+    }
+
     return (
         <MyContext.Provider
             value={{
@@ -62,7 +72,10 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
                 drawingsOn,
                 paintingsOn,
                 photosOn,
-                handleRouting
+                handleRouting,
+                singleViewVisible,
+                singleViewSrc,
+                handleSingleView
             }}>
             {children}
         </MyContext.Provider>

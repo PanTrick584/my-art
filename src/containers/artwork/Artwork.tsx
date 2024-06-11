@@ -3,6 +3,8 @@ import './styles/artwork.scss';
 import { ArtworkItem } from "../../types/types";
 import { ArtworkTitle } from "../../components/ArtworkTitle";
 import { ArtworkData } from "../../components/ArtworkData";
+import { useContextProvider } from '../../context/context';
+
 
 interface ItemData {
     itemData: ArtworkItem
@@ -10,6 +12,8 @@ interface ItemData {
 
 const Artwork = ({itemData}: ItemData) => {
     const { title, type, date, images, point} = itemData;
+    const isVisible = useContextProvider().singleViewVisible;
+    const artworkSrc = useContextProvider().singleViewSrc;
 
     return (
         <div className="artwork">

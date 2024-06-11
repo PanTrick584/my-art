@@ -8,7 +8,7 @@ type CategoryData = {
 
 const Category = ({data}: CategoryData) => {
     return (
-        <div className="category">
+        <div className="category section-grid">
             {data.map( (item, id) => {
                 return (
                     <Artwork key={id} itemData={item}/>

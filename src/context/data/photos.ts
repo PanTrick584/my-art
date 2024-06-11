@@ -3,7 +3,7 @@ import { ArtworksType } from "../../types/types";
 export const photos: ArtworksType = [
     {
         title: {
-            default: "Fish's head #3",
+            default: "Fish's head #1",
             pl: "Rybi łeb #3"
         },
         date: "2022",
@@ -138,12 +138,12 @@ export const photos: ArtworksType = [
     },
     {
         title: {
-            default: "Fish's head #3",
+            default: "Fish's head #2",
             pl: "Rybi łeb #3"
         },
         date: "2022",
         images: [
-            "fish-3.jpg"
+            "fish-8.jpg"
         ],
         type: "photo",
         point: {
@@ -468,10 +468,10 @@ export const photos: ArtworksType = [
     },
     {
         title: {
-            default: "Reflections #1",
-            pl: "Odbicia #1"
+            default: "White #5",
+            pl: "Białe #5"
         },
-        date: "2018",
+        date: "2017",
         images: [
             "foto-20.jpg"
         ],
@@ -486,7 +486,7 @@ export const photos: ArtworksType = [
             default: "Reflections #1",
             pl: "Odbicia #1"
         },
-        date: "2018",
+        date: "2016",
         images: [
             "foto-24.jpg"
         ],
@@ -501,7 +501,7 @@ export const photos: ArtworksType = [
             default: "Reflections #2",
             pl: "Odbicia #2"
         },
-        date: "2018",
+        date: "2016",
         images: [
             "foto-25.jpg"
         ],
@@ -516,7 +516,7 @@ export const photos: ArtworksType = [
             default: "Reflections #3",
             pl: "Odbicia #3"
         },
-        date: "2018",
+        date: "2016",
         images: [
             "foto-26.jpg"
         ],
@@ -531,7 +531,7 @@ export const photos: ArtworksType = [
             default: "Reflections #4",
             pl: "Odbicia #4"
         },
-        date: "2018",
+        date: "2016",
         images: [
             "foto-27.jpg"
         ],
@@ -603,8 +603,8 @@ export const photos: ArtworksType = [
     },
     {
         title: {
-            default: "White #5",
-            pl: "Białe #5"
+            default: "White #6",
+            pl: "Białe #6"
         },
         date: "2018",
         images: [
@@ -618,8 +618,8 @@ export const photos: ArtworksType = [
     },
     {
         title: {
-            default: "White #5",
-            pl: "Białe #5"
+            default: "White #7",
+            pl: "Białe #7"
         },
         date: "2018",
         images: [
@@ -633,8 +633,8 @@ export const photos: ArtworksType = [
     },
     {
         title: {
-            default: "White #6",
-            pl: "Białe #6"
+            default: "White #8",
+            pl: "Białe #8"
         },
         date: "2018",
         images: [
