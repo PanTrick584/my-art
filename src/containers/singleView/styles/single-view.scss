@@ -1,7 +1,99 @@
+@import '../../../styles/variables.scss';
+
 .single-view {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: $colorSecondary;
+
+    .artwork {
+        width: 90%;
+        flex-direction: row;
+        border-right: 1px solid $colorPrimary;
+
+        .artwork-info {
+            width: 100%;
+            margin: 0 0 0 45px;
+        }
+
+        .artwork-data {
+            flex-direction: column;  
+
+            &-type,
+            &-year,
+            &-point {
+                font-size: 22px;
+                color: rgba($colorPrimary, .6);
+                border-bottom: 1px solid rgba($colorPrimary, .6);
+                padding: 5px 0;
+            }
+        
+            &-point {
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                white-space: nowrap;
+            }
+        }
+
+        .artwork-title {
+            font-size: 64px;
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: $colorPrimary;
+        }
+    }
+
+    .artwork-image {
+        border: 1px solid $colorPrimary;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: max-content;
+    }
+
+    &-close {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+        background-color: transparent;
+        color: $colorPrimary;
+        border: none;
+        align-self: flex-start;
+        cursor: pointer;
+
+        &:hover {
+            .close {
+                width: 2px;
+            }
+        }
+
+        .close {
+            width: 1px;
+            height: 60px;
+            background-color: $colorPrimary;
+
+            
+            &-one {
+                transform: rotate(-45deg);
+            }
+
+            &-two {
+                transform: rotate(45deg);
+            }
+        }
+    }
 }

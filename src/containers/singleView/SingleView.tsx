@@ -3,20 +3,24 @@ import { useContextProvider } from '../../context/context';
 import Artwork from '../artwork/Artwork';
 
 const SingleView = () => {
-    const isVisible = useContextProvider().singleViewVisible;
-    const artworkSrc = useContextProvider().singleViewSrc;
-console.log(isVisible);
-console.log(artworkSrc);
+    const { singleViewVisible } = useContextProvider();
+    const { singleViewSrc } = useContextProvider();
+    const handleSingleView = useContextProvider().handleSingleView;
 
     return (
-        <div className="single-view">
-            single view
-            {/* <ArtworkImage image={images} type={type} />
-            <div className="artwork-info">
-                <ArtworkTitle title={title} />
-                <ArtworkData type={type} date={date} point={point}/>
-            </div> */}
-        </div>
+        singleViewVisible && 
+            <div className="single-view">
+                <div className="single-view-container">
+                    <Artwork itemData={singleViewSrc}/>
+                    <button 
+                        className='single-view-close'
+                        onClick={() => handleSingleView( false )}
+                    >
+                        <div className='close close-one'></div>
+                        <div className='close close-two'></div>
+                    </button>
+                </div>
+            </div>
     )
 }
 

@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
+import { ArtworkItem } from '../types/types';
 
 interface MyContextType {
     mainContentOn: boolean;
@@ -7,8 +8,8 @@ interface MyContextType {
     photosOn: boolean;
     handleRouting: (route: string) => void;
     singleViewVisible: boolean;
-    singleViewSrc: string;
-    handleSingleView: (singleViewSrc: string, singleViewVisible: boolean) => void;
+    singleViewSrc: ArtworkItem | undefined;
+    handleSingleView: (singleViewVisible: boolean, singleViewSrc?: ArtworkItem) => void;
 }
 
 interface MyContextProviderProps {
@@ -31,7 +32,7 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
     const [paintingsOn, setPaintingsOn] = useState(false);
     const [photosOn, setPhotosOn] = useState(false);
     const [singleViewVisible, setSingleViewVisible] = useState(false);
-    const [singleViewSrc, setSingleViewSrc] = useState('');
+    const [singleViewSrc, setSingleViewSrc] = useState<ArtworkItem | undefined>();
 
     const handleRouting = (route: string) => {
         if (route === 'main') {
@@ -60,8 +61,8 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
         }
     }
 
-    const handleSingleView = (singleViewSrc: string, singleViewVisible: boolean) => {
-        setSingleViewVisible(!singleViewVisible);
+    const handleSingleView = (singleViewVisible: boolean, singleViewSrc?: ArtworkItem) => {
+        setSingleViewVisible(singleViewVisible);
         setSingleViewSrc(singleViewSrc)
     }
 

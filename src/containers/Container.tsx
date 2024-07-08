@@ -7,16 +7,23 @@ import { paintings } from '../context/data/paintings.ts';
 import { photos } from '../context/data/photos.ts';
 import Category from './category/Category.tsx';
 import SingleView from './singleView/SingleView.tsx';
+import { useEffect, useState } from 'react';
+import { ArtworkItem } from '../types/types.ts';
 
 const Container = () => {
     const mainContentVisible = useContextProvider().mainContentOn;
     const drawingsVisible = useContextProvider().drawingsOn;
     const paintingsVisible = useContextProvider().paintingsOn;
     const photosVisible = useContextProvider().photosOn;
-    const mixArt = [...drawings, ...paintings, ...photos]
+    const [mixArt, setMixArt] = useState<ArtworkItem[]>([]);
+
+    useEffect(() => {
+        const mixedAray = [...drawings, ...paintings, ...photos]
             .map(value => ({ value, sort: Math.random() }))
             .sort((a, b) => a.sort - b.sort)
             .map(({ value }) => value)
+            setMixArt(mixedAray)
+    }, [])
 
     const artworks_a = mixArt.slice(0, 3)
     const artworks_b = mixArt.slice(4, 9)
@@ -27,7 +34,7 @@ const Container = () => {
 
     return (
         <div className="container">
-            {/* <SingleView /> */}
+            <SingleView />
             <div className="section-container">
                 {mainContentVisible 
                  && <>
