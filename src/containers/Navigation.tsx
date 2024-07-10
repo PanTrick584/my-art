@@ -8,7 +8,7 @@ const Navigation = () => {
         <nav className='navigation'>
             <div className="nav-container">
                 <div className="nav-text">
-                    patryk.chodacki.art
+                    patryk.chodacki.art.
                 </div>
                 <ul className='nav-list'>
                     <li className="nav-list-item" onClick={()=> setRouting('main')}>home</li>

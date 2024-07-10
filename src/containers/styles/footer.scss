@@ -18,11 +18,13 @@
 
         
         .item-header {
-            width: 100%;
+            width: min-content;
             margin-bottom: 10px;
+            padding: 0 12px;
             overflow: hidden;
             font-size: 20px;
-            color: white;
+            color: $colorPrimary;
+            background-color: $colorSecondary;
             text-overflow: ellipsis;
             white-space: nowrap;
         }

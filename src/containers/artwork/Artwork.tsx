@@ -14,10 +14,7 @@ const Artwork = ({itemData}: ItemData) => {
 
     return (
         <>
-            <div
-                className="artwork"
-                
-            >
+            <div className="artwork">
                 <ArtworkImage 
                     image={images} 
                     type={type}

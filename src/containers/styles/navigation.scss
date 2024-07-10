@@ -2,14 +2,9 @@
 
 .navigation {
     width: 100%;
-    position: relative;
+    position: fixed;
     overflow: hidden;
-    background-color: $colorPrimary;
     z-index: 1;
-
-    // @media screen and (min-width: 1024px) {
-    //     position: relative;
-    // }
 
     .nav-container {
         width: 100%;
@@ -25,11 +20,12 @@
         }
 
         .nav-text {
-            width: auto;
+            width: min-content;
             margin: 0 auto 0 0;
             font-size: 32px;
-            // background-color: white;
-            color: white;
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+            padding:  0 12px;
         }
 
         .nav-list {
@@ -46,6 +42,7 @@
                 padding: 2px 12px 0 0;
                 font-size: 22px;
                 color: $colorSecondary;
+                background-color: $colorPrimary;
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: all .1s;
@@ -59,6 +56,10 @@
                 &:active,
                 &:focus-visible {
                     color: rgba($colorSecondary, .5);
+                }
+
+                &:last-of-type {
+                    padding-right: 0;
                 }
             }
         }

@@ -12,6 +12,8 @@
     justify-content: center;
     padding-left: 150px;
     background-color: $colorSecondary;
+    transform: translateX(-100%);
+    animation: show_popup .8s forwards;
 
     .artwork {
         width: 90%;
@@ -96,4 +98,28 @@
             }
         }
     }
+
+    &-hide {
+        animation: hide_popup .6s forwards;
+    }
 }
+
+@keyframes show_popup {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hide_popup {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+} 

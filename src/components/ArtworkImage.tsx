@@ -49,14 +49,14 @@ export const ArtworkImage = ({image, type, itemData}: Image) => {
                     <div 
                         className="btn-left" 
                         onClick={() => handleImageChange(0)}>
-                            <div className='direction'>{'<<<'}</div>
+                            <div className='direction'></div>
                             <div className="btn-counter">{currentImage + 1}</div>
                         </div>
                     <div 
                         className="btn-right"
                         onClick={() => handleImageChange(1)}>
                             <div className="btn-counter">{image?.length}</div>
-                            <div className='direction'>{'>>>'}</div>
+                            <div className='direction'></div>
                         </div>
                 </div>
             }
