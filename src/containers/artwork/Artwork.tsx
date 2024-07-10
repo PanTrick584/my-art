@@ -1,7 +1,6 @@
 import { ArtworkImage } from "../../components/ArtworkImage";
 import { ArtworkTitle } from "../../components/ArtworkTitle";
 import { ArtworkData } from "../../components/ArtworkData";
-import { useContextProvider } from '../../context/context';
 import { ArtworkItem } from "../../types/types";
 import './styles/artwork.scss';
 
