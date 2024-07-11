@@ -3,6 +3,78 @@ import { ArtworksType } from "../../types/types";
 export const paintings: ArtworksType = [
     {
         title: {
+            default: "Johnny Guitar",
+            pl: "Gitarzysta"
+        },
+        date: "2024",
+        images: [
+            "jhonny-guitar-1-2024.jpg",
+            "jhonny-guitar-2-2024.jpg",
+            "jhonny-guitar-3-2024.jpg",
+            "jhonny-guitar-4-2024.jpg",
+            "jhonny-guitar-5-2024.jpg",
+            "jhonny-guitar-6-2024.jpg",
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Good night",
+            pl: "Dobranoc"
+        },
+        date: "2024",
+        images: [
+            "good-night-1-2024.jpg",
+            "good-night-2-2024.jpg",
+            "good-night-3-2024.jpg"
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Moooom!",
+            pl: "Maaaaamo!"
+        },
+        date: "2024",
+        images: [
+            "moooom-1-2023.jpg",
+            "moooom-2-2023.jpg",
+            "moooom-3-2023.jpg",
+            "moooom-3-2023.jpg",
+            "moooom-5-2023.jpg",
+            "moooom-6-2023.jpg",
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Early night",
+            pl: "Noc jeszcze młoda"
+        },
+        date: "2024",
+        images: [
+            "early-night-2023.jpg"
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
             default: "Last sunday",
             pl: "Ostatnia niedziela"
         },

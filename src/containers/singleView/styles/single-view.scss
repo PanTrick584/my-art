@@ -76,7 +76,11 @@
 
     .artwork-image {
         border: 1px solid $colorPrimary;
-        margin-left: 3.5%;
+        
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 3.5%;
+        }
 
         &-buttons {
             left: 18px;
@@ -87,16 +91,16 @@
                 color: $colorPrimary;
                 border: 1px solid $colorPrimary;
                 border-bottom: none;
+
+                &:hover {
+                    background-color: $colorPrimary;
+                    color: $colorSecondary;
+                }
             }
 
             .btn-left {
                 border-left: 1px solid $colorPrimary;
                 border-top-left-radius: 6px;
-
-                @media screen and (min-width: 1024px) {
-                    border-top-left-radius: 200px;
-                    border-bottom-left-radius: 200px;
-                }
     
                 .btn-counter {
                     margin-right: 10px;
