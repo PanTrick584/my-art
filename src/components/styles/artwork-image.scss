@@ -16,13 +16,19 @@
 
     &-buttons {
         position: absolute;
-        bottom: 10px;
-        left: 50%;
+        bottom: 0;
+        left: 0;
         display: flex;
         flex-direction: row;
         height: 40px;
-        width: 25%;
-        transform: translateX(-50%);
+        width: 100px;
+
+        @media screen and (min-width: 1024px) {
+            // left: 50%;
+            // height: 40px;
+            // width: 25%;
+            // transform: translateX(-50%);
+        }
 
         .btn-left,
         .btn-right {
@@ -37,6 +43,11 @@
             transition: all .2s;
             color: $colorSecondary;
             border: 1px solid $colorSecondary;
+            border-bottom: none;
+
+            // @media screen and (min-width: 1024px) {
+            //     border: 1px solid $colorSecondary;
+            // }
 
             &:hover {
                 background-color: $colorSecondary;
@@ -49,8 +60,12 @@
         }
 
         .btn-left {
-            border-top-left-radius: 200px;
-            border-bottom-left-radius: 200px;
+            border-left: none;
+
+            // @media screen and (min-width: 1024px) {
+            //     border-top-left-radius: 200px;
+            //     border-bottom-left-radius: 200px;
+            // }
 
             .btn-counter {
                 margin-right: 10px;
@@ -59,8 +74,12 @@
 
         .btn-right {
             border-left: 1px solid $colorPrimary;
-            border-top-right-radius: 200px;
-            border-bottom-right-radius: 200px;
+            border-top-right-radius: 6px;
+
+            // @media screen and (min-width: 1024px) {
+            //     border-top-left-radius: 200px;
+            //     border-bottom-left-radius: 200px;
+            // }
 
             .btn-counter {
                 margin-left: 10px;

@@ -18,10 +18,7 @@ const SingleView = () => {
 
     return (
         singleViewVisible && 
-            <div className={`single-view
-                            ${hidePopup ? '' : 'single-view-hide'}
-                                 `
-                                 }>
+            <div className={`single-view ${hidePopup ? '' : 'single-view-hide'}`}>
                 <div className="single-view-container">
                     <Artwork itemData={singleViewSrc}/>
                     <button 

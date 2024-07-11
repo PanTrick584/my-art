@@ -10,13 +10,14 @@
         width: 100%;
         max-width: 1440px;
         display: flex;
-        margin: 30px;
+        margin: 10px 30px;
         flex-direction: column;
         
         @media screen and (min-width: 1024px) {
             margin: 75px auto 0;
             flex-direction: row;
             align-items: flex-end;
+            margin: 30px auto;
         }
 
         .nav-text {
@@ -25,16 +26,17 @@
             font-size: 32px;
             background-color: $colorSecondary;
             color: $colorPrimary;
-            padding:  0 12px;
+            padding: 0 12px;
         }
 
         .nav-list {
             display: flex;
             align-items: flex-start;
             list-style-type: none;
+            margin-top: 15px;
 
             @media screen and (min-width: 1024px) {
-                margin: 0  0 0 auto;
+                margin: 0 0 0 auto;
             }
     
             &-item {

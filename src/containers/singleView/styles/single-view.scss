@@ -8,21 +8,33 @@
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 150px;
+    // align-items: center;
+    // justify-content: center;
     background-color: $colorSecondary;
     transform: translateX(-100%);
     animation: show_popup .8s forwards;
 
     .artwork {
-        width: 90%;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         border-right: 1px solid $colorPrimary;
 
-        .artwork-info {
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
             width: 100%;
-            margin: 0 0 0 45px;
+            height: auto;
+            // margin: 40px;
+        }
+
+        .artwork-info {
+            width: 90%;
+            margin: 20px 20px 0;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                margin: 0 0 auto 45px;
+            }
         }
 
         .artwork-data {
@@ -31,10 +43,14 @@
             &-type,
             &-year,
             &-point {
-                font-size: 22px;
+                font-size: 14px;
                 color: rgba($colorPrimary, .6);
                 border-bottom: 1px solid rgba($colorPrimary, .6);
                 padding: 5px 0;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 22px;
+                }
             }
         
             &-point {
@@ -45,37 +61,80 @@
         }
 
         .artwork-title {
-            font-size: 64px;
+            font-size: 32px;
             width: 100%;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
             color: $colorPrimary;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 64px;
+            }
         }
     }
 
     .artwork-image {
         border: 1px solid $colorPrimary;
+        margin-left: 3.5%;
+
+        &-buttons {
+            left: 18px;
+
+            .btn-left,
+            .btn-right {
+                background-color: $colorSecondary;
+                color: $colorPrimary;
+                border: 1px solid $colorPrimary;
+                border-bottom: none;
+            }
+
+            .btn-left {
+                border-left: 1px solid $colorPrimary;
+                border-top-left-radius: 6px;
+
+                @media screen and (min-width: 1024px) {
+                    border-top-left-radius: 200px;
+                    border-bottom-left-radius: 200px;
+                }
+    
+                .btn-counter {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     &-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
         height: max-content;
+
+        @media screen and (min-width: 1024px) {
+            height: auto;
+            flex-direction: row;
+            // justify-content: center;
+            margin: 30px;
+        }
     }
 
     &-close {
-        width: 120px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 20px;
         font-size: 64px;
         background-color: transparent;
         color: $colorPrimary;
         border: none;
         align-self: flex-start;
         cursor: pointer;
+
+        @media screen and (min-width: 1024px) {
+            width: 120px;
+        }
 
         &:hover {
             .close {
@@ -85,10 +144,13 @@
 
         .close {
             width: 1px;
-            height: 60px;
+            height: 40px;
             background-color: $colorPrimary;
 
-            
+            @media screen and (min-width: 1024px) {
+                height: 60px;
+            }
+
             &-one {
                 transform: rotate(-45deg);
             }
