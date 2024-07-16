@@ -8,6 +8,36 @@ export const drawings: ArtworksType = [
         },
         date: "2023",
         images: [
+            "abs-1.jpg"
+        ],
+        type: "drawing",
+        point: {
+            default: "Present Times",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Abstract composition #1",
+            pl: "Kompozycja abstrakcyjna #1"
+        },
+        date: "2023",
+        images: [
+            "abs-2.jpg"
+        ],
+        type: "drawing",
+        point: {
+            default: "Present Times",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Abstract composition #1",
+            pl: "Kompozycja abstrakcyjna #1"
+        },
+        date: "2023",
+        images: [
             "dr-2023-1-a.jpg",
             "dr-2023-1-b.jpg",
             "dr-2023-1-c.jpg",

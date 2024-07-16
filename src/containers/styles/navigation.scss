@@ -14,10 +14,9 @@
         flex-direction: column;
         
         @media screen and (min-width: 1024px) {
-            margin: 75px auto 0;
             flex-direction: row;
-            align-items: flex-end;
-            margin: 30px auto;
+            align-items: flex-start;
+            margin: 50px auto;
         }
 
         .nav-text {
@@ -27,6 +26,33 @@
             background-color: $colorSecondary;
             color: $colorPrimary;
             padding: 0 12px;
+        }
+
+        .nav-menu {
+            .contact {
+                &-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin-top: 10px;
+                    gap: 10px;
+                    animation: show-contact .2s forwards;
+
+                    &.move-container {
+                        animation: hide-contact .2s forwards;
+                    }
+
+                    .item-link {
+                        background-color: $colorPrimary;
+                        padding: 2px 0 2px 4px;
+                    }
+
+                     a {
+                        text-decoration: none;
+                        color: $colorSecondary;
+                     }
+                }
+            }
         }
 
         .nav-list {
@@ -65,5 +91,29 @@
                 }
             }
         }
+    }
+}
+
+@keyframes show-contact {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide-contact {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-30%);
+        opacity: 0;
     }
 }
