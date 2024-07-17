@@ -8,9 +8,10 @@ type Image = {
     image: string[];
     type: string;
     itemData?: ArtworkItem;
+    date: string;
 }
 
-export const ArtworkImage = ({image, type, itemData}: Image) => {
+export const ArtworkImage = ({image, type, itemData, date}: Image) => {
     const [currentImage, setCurrentImage] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(true);
     const { handleSingleView } = useContextProvider();
@@ -35,7 +36,7 @@ export const ArtworkImage = ({image, type, itemData}: Image) => {
                 return (
                     <img 
                         onClick={() => handleSingleView( true, itemData)}
-                        src={`assets/${type}s/${img}`} 
+                        src={`assets/${type}s/${type === "drawing" ? date : ''}/${img}`} 
                         alt="" 
                         key={id}
                         className="artwork-image-item" 

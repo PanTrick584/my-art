@@ -3,6 +3,10 @@ import { useContextProvider } from '../context/context';
 import Section from './sections/Section.tsx';
 
 import { drawings } from '../context/data/drawings.ts';
+import { drawings_2023 } from '../context/data/drawings/drawings_2023.ts';
+import { drawings_2022 } from '../context/data/drawings/drawings_2022.ts';
+import { drawings_2018 } from '../context/data/drawings/drawings_2018.ts';
+import { drawings_2014 } from '../context/data/drawings/drawings_2014.ts';
 import { paintings } from '../context/data/paintings.ts';
 import { photos } from '../context/data/photos.ts';
 import Category from './category/Category.tsx';
@@ -16,9 +20,14 @@ const Container = () => {
     const paintingsVisible = useContextProvider().paintingsOn;
     const photosVisible = useContextProvider().photosOn;
     const [mixArt, setMixArt] = useState<ArtworkItem[]>([]);
+    const fullDrawings = [...drawings_2023, ...drawings_2022, ...drawings_2018, ...drawings_2014];
 
     useEffect(() => {
-        const mixedAray = [...drawings, ...paintings, ...photos]
+        const mixedAray = [
+            ...fullDrawings,
+            ...paintings,
+            ...photos
+            ]
             .map(value => ({ value, sort: Math.random() }))
             .sort((a, b) => a.sort - b.sort)
             .map(({ value }) => value)
@@ -48,7 +57,7 @@ const Container = () => {
                 }
                 {drawingsVisible
                  && <div className='drawings-container'>
-                        <Category data={drawings} />
+                        <Category data={fullDrawings} />
                     </div>}
                 {paintingsVisible
                  && <div className='paintings-container'>

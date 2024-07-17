@@ -15,9 +15,10 @@ const Artwork = ({itemData}: ItemData) => {
         <>
             <div className="artwork">
                 <ArtworkImage 
-                    image={images} 
+                    image={images}
                     type={type}
                     itemData={itemData}
+                    date={date}
                 />
                 <div className="artwork-info">
                     <ArtworkTitle title={title} />
