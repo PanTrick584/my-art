@@ -9,11 +9,23 @@ const Navigation = () => {
     const [isContact, setIsContact] = useState<boolean>(false);
 
     useEffect(() => {
-        !isContact ? 
-        setIsContact(prev => !prev) :
-        setTimeout(() =>  setIsContact(prev => !prev), 400) 
-       
+        !isContact
+        ? setIsContact(prev => !prev)
+        : setTimeout(() =>  setIsContact(prev => !prev), 400);
     }, [checkInfo])
+
+    const handleScroll = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+    // useEffect(() => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: "smooth"
+    //     })
+    // }, [setRouting])
 
     return (
         <nav className='navigation'>
@@ -23,10 +35,10 @@ const Navigation = () => {
                 </div>
                 <div className="nav-menu">
                     <ul className='nav-list'>
-                        <li className="nav-list-item" onClick={()=> setRouting('main')}>home</li>
-                        <li className="nav-list-item" onClick={()=> setRouting('drawings')}>drawing</li>
-                        <li className="nav-list-item" onClick={()=> setRouting('paintings')}>paintings</li>
-                        <li className="nav-list-item" onClick={()=> setRouting('photos')}>photo</li>
+                        <li className="nav-list-item" onClick={()=> {setRouting('main'); handleScroll()}}>home</li>
+                        <li className="nav-list-item" onClick={()=> {setRouting('drawings'); handleScroll()}}>drawing</li>
+                        <li className="nav-list-item" onClick={()=> {setRouting('paintings'); handleScroll()}}>paintings</li>
+                        <li className="nav-list-item" onClick={()=> {setRouting('photos'); handleScroll()}}>photo</li>
                         <li className="nav-list-item contact" onClick={()=> setCheckInfo(prev => !prev)}>contact</li>
                     </ul>
                     {isContact &&

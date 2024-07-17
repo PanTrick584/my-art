@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
 import { ArtworkItem } from '../types/types';
 
 interface MyContextType {
@@ -60,6 +60,13 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
             setPhotosOn(true);
         }
     }
+
+    // useEffect(() => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: "smooth"
+    //     })
+    // }, [handleRouting])
 
     const handleSingleView = (singleViewVisible: boolean, singleViewSrc?: ArtworkItem) => {
         setSingleViewVisible(singleViewVisible);

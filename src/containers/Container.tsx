@@ -2,10 +2,13 @@ import './styles/container.scss';
 import { useContextProvider } from '../context/context';
 import Section from './sections/Section.tsx';
 
-import { drawings } from '../context/data/drawings.ts';
+// import { drawings } from '../context/data/drawings.ts';
 import { drawings_2023 } from '../context/data/drawings/drawings_2023.ts';
 import { drawings_2022 } from '../context/data/drawings/drawings_2022.ts';
 import { drawings_2018 } from '../context/data/drawings/drawings_2018.ts';
+import { drawings_2017 } from '../context/data/drawings/drawings_2017.ts';
+import { drawings_2016 } from '../context/data/drawings/drawings_2016.ts';
+import { drawings_2015 } from '../context/data/drawings/drawings_2015.ts';
 import { drawings_2014 } from '../context/data/drawings/drawings_2014.ts';
 import { paintings } from '../context/data/paintings.ts';
 import { photos } from '../context/data/photos.ts';
@@ -20,7 +23,15 @@ const Container = () => {
     const paintingsVisible = useContextProvider().paintingsOn;
     const photosVisible = useContextProvider().photosOn;
     const [mixArt, setMixArt] = useState<ArtworkItem[]>([]);
-    const fullDrawings = [...drawings_2023, ...drawings_2022, ...drawings_2018, ...drawings_2014];
+    const fullDrawings = [
+            ...drawings_2023,
+            ...drawings_2022,
+            ...drawings_2018,
+            ...drawings_2017,
+            ...drawings_2016,
+            ...drawings_2015,
+            ...drawings_2014
+        ];
 
     useEffect(() => {
         const mixedAray = [
