@@ -3,6 +3,7 @@ import { useContextProvider } from '../context/context';
 import Section from './sections/Section.tsx';
 
 // import { drawings } from '../context/data/drawings.ts';
+import { drawings_2024 } from '../context/data/drawings/drawings_2024.ts';
 import { drawings_2023 } from '../context/data/drawings/drawings_2023.ts';
 import { drawings_2022 } from '../context/data/drawings/drawings_2022.ts';
 import { drawings_2018 } from '../context/data/drawings/drawings_2018.ts';
@@ -24,6 +25,7 @@ const Container = () => {
     const photosVisible = useContextProvider().photosOn;
     const [mixArt, setMixArt] = useState<ArtworkItem[]>([]);
     const fullDrawings = [
+            ...drawings_2024,
             ...drawings_2023,
             ...drawings_2022,
             ...drawings_2018,

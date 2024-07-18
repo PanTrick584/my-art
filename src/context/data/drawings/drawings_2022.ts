@@ -18,7 +18,7 @@ export const drawings_2022: ArtworksType = [
     },
     {
         title: {
-            default: "Abstract composition #1",
+            default: "Moonlight",
             pl: "Kompozycja abstrakcyjna #1"
         },
         date: "2022",

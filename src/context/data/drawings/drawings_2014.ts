@@ -123,8 +123,8 @@ export const drawings_2014: ArtworksType = [
     },
     {
         title: {
-            default: "Trash #1",
-            pl: "Śmieci #1"
+            default: "Trash #2",
+            pl: "Śmieci #2"
         },
         date: "2014",
         images: [
@@ -138,8 +138,8 @@ export const drawings_2014: ArtworksType = [
     },
     {
         title: {
-            default: "Trash #1",
-            pl: "Śmieci #1"
+            default: "Trash #3",
+            pl: "Śmieci #3"
         },
         date: "2014",
         images: [

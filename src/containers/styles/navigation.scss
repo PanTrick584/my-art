@@ -7,13 +7,13 @@
     z-index: 1;
 
     .nav-container {
-        width: 100%;
         max-width: 1440px;
         display: flex;
         margin: 10px 30px;
         flex-direction: column;
         
         @media screen and (min-width: 1024px) {
+            width: 100%;
             flex-direction: row;
             align-items: flex-start;
             margin: 50px auto;

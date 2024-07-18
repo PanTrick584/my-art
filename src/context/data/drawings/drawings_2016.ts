@@ -18,12 +18,27 @@ export const drawings_2016: ArtworksType = [
     },
     {
         title: {
-            default: "Surreal composition with mask",
-            pl: "Surrealistyczna kompozycja z maską"
+            default: "Act of unknown model #2",
+            pl: "Akt nieznanego modela #2"
         },
         date: "2016",
         images: [
             "act-2.jpg"
+        ],
+        type: "drawing",
+        point: {
+            default: "Academy of Fine Arts",
+            pl: "Akademia Sztuk Pięknych"
+        }
+    },
+    {
+        title: {
+            default: "Act of unknown model #3",
+            pl: "Akt nieznanego modela #3"
+        },
+        date: "2016",
+        images: [
+            "act-3.jpg"
         ],
         type: "drawing",
         point: {
@@ -39,21 +54,6 @@ export const drawings_2016: ArtworksType = [
         date: "2016",
         images: [
             "composition-w-act-1.jpg"
-        ],
-        type: "drawing",
-        point: {
-            default: "Academy of Fine Arts",
-            pl: "Akademia Sztuk Pięknych"
-        }
-    },
-    {
-        title: {
-            default: "Act of unknown model #4",
-            pl: "Akt nieznanego modela #4"
-        },
-        date: "2016",
-        images: [
-            "act-3.jpg"
         ],
         type: "drawing",
         point: {
