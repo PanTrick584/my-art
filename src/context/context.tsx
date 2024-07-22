@@ -61,13 +61,6 @@ export const ContextProvider: React.FC<MyContextProviderProps> = ({ children }) 
         }
     }
 
-    // useEffect(() => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: "smooth"
-    //     })
-    // }, [handleRouting])
-
     const handleSingleView = (singleViewVisible: boolean, singleViewSrc?: ArtworkItem) => {
         setSingleViewVisible(singleViewVisible);
         setSingleViewSrc(singleViewSrc)
