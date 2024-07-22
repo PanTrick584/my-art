@@ -8,8 +8,6 @@
     height: 100%;
     width: 100%;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
     background-color: $colorSecondary;
     transform: translateX(-100%);
     animation: show_popup .8s forwards;
@@ -23,21 +21,54 @@
         @media screen and (min-width: 1024px) {
             flex-direction: row;
             width: 100%;
-            height: auto;
-            // margin: 40px;
+            height: min-content;
+            margin: auto;
         }
 
-        .artwork-info {
-            width: 90%;
-            margin: 20px 20px 0;
-
-            @media screen and (min-width: 1024px) {
-                width: 100%;
-                margin: 0 0 auto 45px;
+        &-image {
+            border: 1px solid $colorPrimary;
+            flex: 0 0 45%;
+    
+            &-buttons {
+                left: 18px;
+    
+                .btn-left,
+                .btn-right {
+                    background-color: $colorSecondary;
+                    color: $colorPrimary;
+                    border: 1px solid $colorPrimary;
+                    border-bottom: none;
+    
+                    &:hover {
+                        background-color: $colorPrimary;
+                        color: $colorSecondary;
+                    }
+                }
+    
+                .btn-left {
+                    border-left: 1px solid $colorPrimary;
+                    border-top-left-radius: 6px;
+        
+                    .btn-counter {
+                        margin-right: 10px;
+                    }
+                }
             }
         }
 
-        .artwork-data {
+        &-info {
+            flex: 0 0 45%;
+            padding: 20px;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                padding: 0 0 0 30px;
+                align-self: flex-start;
+                margin-top: 0;
+            }
+        }
+
+        &-data {
             flex-direction: column;  
 
             &-type,
@@ -60,7 +91,7 @@
             }
         }
 
-        .artwork-title {
+        &-title {
             font-size: 32px;
             width: 100%;
             text-overflow: ellipsis;
@@ -70,40 +101,6 @@
 
             @media screen and (min-width: 1024px) {
                 font-size: 64px;
-            }
-        }
-    }
-
-    .artwork-image {
-        border: 1px solid $colorPrimary;
-
-        @media screen and (min-width: 1024px) {
-            margin-left: 3.5%;
-        }
-
-        &-buttons {
-            left: 18px;
-
-            .btn-left,
-            .btn-right {
-                background-color: $colorSecondary;
-                color: $colorPrimary;
-                border: 1px solid $colorPrimary;
-                border-bottom: none;
-
-                &:hover {
-                    background-color: $colorPrimary;
-                    color: $colorSecondary;
-                }
-            }
-
-            .btn-left {
-                border-left: 1px solid $colorPrimary;
-                border-top-left-radius: 6px;
-    
-                .btn-counter {
-                    margin-right: 10px;
-                }
             }
         }
     }
