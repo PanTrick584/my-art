@@ -102,6 +102,23 @@ export const paintings: ArtworksType = [
         },
         date: "2023",
         images: [
+            "moon-reflection-1-2023.jpg",
+            "moon-reflection-2-2023.jpg",
+            "moon-reflection-3-2023.jpg"
+        ],
+        type: "painting",
+        point: {
+            default: "Present work",
+            pl: "Bieżące prace"
+        }
+    },
+    {
+        title: {
+            default: "Moooom!",
+            pl: "Maaaaamo!"
+        },
+        date: "2023",
+        images: [
             "moooom-1-2023.jpg",
             "moooom-2-2023.jpg",
             "moooom-3-2023.jpg",
