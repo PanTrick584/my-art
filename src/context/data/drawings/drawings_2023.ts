@@ -217,7 +217,11 @@ export const drawings_2023: ArtworksType = [
         },
         date: "2023",
         images: [
-            "abs-12.jpg"
+            "abs-12.jpg",
+            "abs-12-1.jpg",
+            "abs-12-2.jpg",
+            "abs-12-3.jpg",
+            "abs-12-4.jpg",
         ],
         type: "drawing",
         point: {
